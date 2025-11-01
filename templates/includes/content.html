@@ -1,0 +1,6 @@
+{% for page in pages.keys() %}
+<section id="{{ page }}" class="category {{ page }}"></section>
+<h2 class="titre-page">{{ pages[page] }}</h2>
+{% include "includes/pages/" ~ page ~ ".html" %}
+</section>
+{% endfor %}

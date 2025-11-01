@@ -24,7 +24,6 @@ pages:
   publications: "Publications"
   these: "Travaux de thèse"
   reseaux: "Réseaux"
-  404: "Erreur 404"
 header:
   photo: "ChristopheRubeck.jpg"
   job_title: "Consultant en Data Science"
