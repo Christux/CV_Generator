@@ -2,5 +2,8 @@
     "python.defaultInterpreterPath": "./.venv",
     "python.terminal.activateEnvironment": true,
     "editor.defaultFormatter": "ms-python.autopep8",
-    "python.analysis.typeCheckingMode": "standard"
+    "python.analysis.typeCheckingMode": "standard",
+    "[css]": {
+        "editor.defaultFormatter": "vscode.css-language-features"
+    }
 }
