@@ -1,0 +1,33 @@
+<title>{{ head.titre }}</title>
+
+<meta charset="utf-8" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="{{ head.description }}"/>
+<meta name="keywords" content="Curriculum Vitae, CV, {% for page in head.pages.values() %} {{ page }}, {% endfor %}"/>
+<meta name="author" content="{{ name }}"/>
+<meta name="copyright" content="{{ name }} {{ build_date }}"/>
+<meta name="host" content="{{ head.url }}" />
+<meta name="google-site-verification" content="{{ head.google_key }}" />
+
+<link rel="canonical" href="{{ head.url }}" />
+<link rel="stylesheet" type="text/css" href="css/style.{{ build_id }}.css" />
+<link rel="icon" type="image/png" href="web_hi_res_512.png" />
+
+<meta prefix="og: http://ogp.me/ns#" property="og:type" content="profile" />
+<meta prefix="og: http://ogp.me/ns#" property="og:site_name" content="{{ head.titre }}" />
+<meta prefix="og: http://ogp.me/ns#" property="og:title" content="{{ head.titre }}" />
+<meta prefix="og: http://ogp.me/ns#" property="og:description" content="{{ head.description }}" />
+<meta prefix="og: http://ogp.me/ns#" property="og:url" content="{{ head.url }}" />
+<meta prefix="og: http://ogp.me/ns#" property="og:image" content="{{ head.url }}img/{{ head.photo }}" />
+<meta prefix="og: http://ogp.me/ns#" property="og:image:type" content="image/jpeg" />
+<meta prefix="og: http://ogp.me/ns#" property="og:image:alt" content="{{ name }}" />
+
+<meta name="twitter:image" content="{{ head.url }}img/{{ head.photo }}" />
+<meta name="twitter:image:alt" content="{{ name }}" />
+<meta name="twitter:site" content="{{ head.titre }}" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="{{ head.titre }}" />
+<meta name="twitter:description" content="{{ head.description }}" />
+
+<script src="js/main.{{ build_id }}.js"></script>

@@ -104,10 +104,14 @@ class PageGenerator():
 
     def build_page(self) -> None:
 
-        build_date = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
+        build_id = datetime.now().strftime("%Y%m%d%H%M%S")
+        build_date = datetime.now().year
 
         with open(file=self.app_config.config_file, mode="r", encoding="utf-8") as file:
             data = yaml.safe_load(stream=file)
+
+        data['build_id'] = build_id
+        data['build_date'] = build_date
 
         if self.app_config.debug:
             print(data)
@@ -118,7 +122,7 @@ class PageGenerator():
         #     print(data)
 
         assets_conf = data.get("assets")
-        self.build_assets(build_date, assets_conf)
+        self.build_assets(build_id, assets_conf)
 
         html_output = self.render_template(data=data)
 
