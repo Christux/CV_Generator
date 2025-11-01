@@ -65,7 +65,7 @@ class DevServer:
                 self._observer.schedule(event_handler, path, recursive=True)
         self._observer.start()
 
-        # Serveur HTTP (thread séparé)
+        # Server HTTP
         handler = partial(SimpleHTTPRequestHandler,
                           directory=self.app_config.dist_folder)
         server = HTTPServer((self.app_config.server_host,
