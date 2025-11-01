@@ -1,0 +1,163 @@
+.mb-primary-background {
+  background-color: #283164;
+}
+
+.mb-primary-color {
+  color: #3d467c;
+}
+
+.mb-primary-color a {
+  color: #3d467c;
+}
+
+.mb-primary-color a:hover {
+  color: #283164;
+}
+
+.mb-warn-background {
+  background-color: #4700cc;
+}
+
+.mb-warn-color {
+  color: #6670ff;
+}
+
+.mb-warn-color a {
+  color: #6670ff;
+}
+
+.mb-warn-color a:hover {
+  color: #4700cc;
+}
+
+.mb-info-background {
+  background-color: #4e4d52;
+}
+
+.mb-info-color {
+  color: #8795f6;
+}
+
+.mb-info-color a {
+  color: #687af0;
+}
+
+.mb-info-color a:hover {
+  color: #848fda;
+}
+
+/**
+  * Main page
+  */
+html,
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #eff0f7;
+  color: #0d0233;
+}
+
+html a,
+body a {
+  color: #0d0233;
+  text-decoration: none;
+}
+
+.mb-header {
+  width: 100%;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  text-align: center;
+  background-color: #283164;
+  z-index: 5000;
+}
+
+.mb-header h1 {
+  text-align: center;
+  color: #6b6a70;
+}
+
+/**
+    * Menu
+    */
+.mb-menu {
+  width: 100%;
+  display: block;
+  word-spacing: -4px;
+  text-align: center;
+  background-color: #283164;
+  z-index: 5000;
+}
+
+.mb-menu .mb-menu-item {
+  display: inline-block;
+  word-spacing: normal;
+  color: whitesmoke;
+  position: relative;
+  line-height: 3em;
+  padding-left: 1em;
+  padding-right: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s;
+  /* Safari */
+  transition-duration: 0.4s;
+}
+
+.mb-menu .mb-menu-item a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+.mb-menu .mb-menu-item.active,
+.mb-menu .mb-menu-item:hover {
+  background-color: #3d467c;
+}
+
+.mb-menu .mb-menu-item.active {
+  cursor: auto;
+}
+
+.mb-content {
+  margin: 20px 10px;
+}
+
+/**
+    * Buttons
+    */
+.mb-button {
+  background-color: #283164;
+  border: none;
+  color: whitesmoke;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
+.mb-button:hover {
+  background-color: #3d467c;
+}
+
+.mb-button.active {
+  background-color: #4700cc;
+}
+
+.mb-button.active:hover {
+  background-color: #6670ff;
+}
+
+.mb-button.info {
+  background-color: #4e4d52;
+}
+
+.mb-button.info:hover {
+  background-color: #6b6a70;
+}
