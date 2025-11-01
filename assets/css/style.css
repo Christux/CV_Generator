@@ -262,6 +262,10 @@ footer
     overflow:hidden;
 }
 
+footer a {
+    color: whitesmoke;
+}
+
 /***********************
     STYLE DE LA PAGE
 ************************/
