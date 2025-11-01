@@ -14,3 +14,6 @@ pip install -r requirements.txt
 
 ### Backup env
 pip freeze > requirements.txt
+
+## Lauch Generator
+python -m generator -h
