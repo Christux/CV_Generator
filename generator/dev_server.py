@@ -58,6 +58,7 @@ class DevServer:
         self._observer = Observer()
         for path in [
             self._app_config.config_file,
+            self._app_config.data_file,
             self._app_config.abs_template_folder_path,
             self._app_config.abs_asset_folder_path,
         ]:

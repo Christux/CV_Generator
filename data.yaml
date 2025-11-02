@@ -1,30 +1,48 @@
 # Data
-name: "Christophe Rubeck"
+name: Christophe Rubeck
 head:
   titre: "Christophe Rubeck: Data Scientist"
   url: "http://rubeck.christophe.free.fr/"
   description: |
     Bienvenue sur le Curriculum Vitae de Christophe Rubeck, Data Scientist, spécialiste en analyse de données, modélisation, et machine learning.
-  photo: "ChristopheRubeck-big.jpg"
-  google_key: "GMDGqJyP4roEHJwDaANDACPNu-ygvlmy5CrXF7mP-d0"
+  photo: ChristopheRubeck-big.jpg
+  google_key: GMDGqJyP4roEHJwDaANDACPNu-ygvlmy5CrXF7mP-d0
 github: "https://github.com/Christux/CV_Generator.git"
 menu:
-  - "accueil"
-  - "competences"
-  - "experiences"
-  - "formation"
-  - "interet"
-  - "reseaux"
-  - "publications"
+  - accueil
+  - competences
+  - experiences
+  - formation
+  - interet
+  - reseaux
+  - publications
 pages:
-  accueil: "Accueil"
-  experiences: "Expériences"
-  competences: "Compétences"
-  formation: "Formations"
-  interet: "Centres d'intêrets"
-  publications: "Publications"
-  these: "Travaux de thèse"
-  reseaux: "Réseaux"
+  accueil: Accueil
+  experiences: Expériences
+  competences: Compétences
+  formation: Formations
+  interet: Centres d'intêrets
+  publications: Publications
+  these: Travaux de thèse
+  reseaux: Réseaux
 header:
-  photo: "ChristopheRubeck.jpg"
-  job_title: "Consultant en Data Science"
+  photo: ChristopheRubeck.jpg
+  job_title: Consultant en Data Science
+content:
+  accueil:
+    - title: Présentation
+      content: |
+        Consultant freelance en **Data Science**, je suis spécialiste de l'analyse de données, la modélisation et l'apprentissage automatique (Scikit-learn, Torch et Tensorflow).
+        Je possède également une seconde casquette de développeur fullstack de logiciels de gestion dans les technologies SQL Server, .NET (Entity Framework, Web Api)
+        et Angular. Je suis actuellement en mission mais reste à l'écoute d'opportunités futures.
+    - title: Compétences
+      content: |
+        - **{mb-info-color:Développement full stack d'applications de gestion}**
+            - Back-end en C#.NET via ApiController, Entity Framework et SQL Server
+            - Front-end en Angular, AngularJS, Material et RxJS
+            - Développement de workflows et système de gestion de droits
+        - **Architecture logicielle**
+            - 3-tiers, REST full
+            - Design patterns
+        - **Gestion de projets**
+            - Développement agile, SCRUM, extreme programming

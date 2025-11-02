@@ -1,0 +1,9 @@
+{% for item in content.accueil %}
+<article class="item">
+	<h3 class="titre mb-warn-color">{{ item.title }}</h3>
+	<div class="contenu">
+		{{ item.content }}
+	</div>
+</article>
+
+{% endfor %}

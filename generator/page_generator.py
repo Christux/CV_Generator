@@ -1,6 +1,7 @@
 from datetime import datetime
 import glob
 import os
+import re
 import shutil
 from typing import Any
 import yaml
@@ -14,14 +15,42 @@ class PageGenerator():
     def __init__(self, app_config: AppConfig) -> None:
         self._app_config = app_config
 
-    def _convert_markdown(self, text: Any) -> Any:
-        if isinstance(text, str):
-            return markdown.markdown(text)
-        if isinstance(text, list):
-            return [self._convert_markdown(x) for x in text]
-        if isinstance(text, dict):
-            return {k: self._convert_markdown(v) for k, v in text.items()}
-        return text
+    def _convert_markdown(self, data: Any, key: str | None = None) -> Any:
+        
+        if key == 'content' and isinstance(data, str):
+            if self._app_config.debug:
+                print(data)
+            return markdown.markdown(data)
+        
+        if isinstance(data, list):
+            return [self._convert_markdown(x) for x in data]
+
+        if isinstance(data, dict):
+            return {k: self._convert_markdown(v, k) for k, v in data.items()}
+        
+        return data
+    
+    def _transform_braces_to_span(self, text: str) -> str:
+        # {red:Python} → <span class="red">Python</span>
+        pattern = r"\{([\w-]+):(.+?)\}"
+        return re.sub(pattern, r'<span class="\1">\2</span>', text, flags=re.DOTALL)
+
+    def _apply_style_tags(self, data: Any) -> Any:
+        
+        if isinstance(data, str):
+            if self._app_config.debug:
+                print(data)
+            return self._transform_braces_to_span(text=data)
+        
+        if isinstance(data, list):
+            return [self._apply_style_tags(x) for x in data]
+        
+        if isinstance(data, dict):
+            if self._app_config.debug:
+                print(data)
+            return {k: self._apply_style_tags(v) for k, v in data.items()}
+        
+        return data
 
     def _render_template(self, data: Any) -> str:
         env = Environment(
@@ -43,7 +72,7 @@ class PageGenerator():
             return html.replace("</body>", reload_script + "\n</body>")
 
         return html
-    
+
     def _build_assets(self, build_id: str, assets_conf: Any | None = None) -> None:
 
         css_src = os.path.join(self._app_config.asset_folder, "css")
@@ -126,12 +155,12 @@ class PageGenerator():
         with open(file=self._app_config.config_file, mode="r", encoding="utf-8") as file:
             config = yaml.safe_load(stream=file)
         return config
-    
+
     def _load_data(self) -> Any:
         with open(file=self._app_config.data_file, mode="r", encoding="utf-8") as file:
             data = yaml.safe_load(stream=file)
         return data
-    
+
     def _save_page(self, html) -> None:
         with open(file=self._app_config.abs_dist_page_path, mode="w", encoding="utf-8") as file:
             file.write(html)
@@ -155,10 +184,12 @@ class PageGenerator():
         if self._app_config.debug:
             print(data)
 
-        #data = self.convert_markdown(text=data)
+        data = self._convert_markdown(data=data)
 
-        # if self.app_config.debug:
-        #     print(data)
+        data = self._apply_style_tags(data=data)
+
+        if self._app_config.debug:
+            print(data)
 
         os.makedirs(self._app_config.dist_folder, exist_ok=True)
 

@@ -3,6 +3,11 @@
     "python.terminal.activateEnvironment": true,
     "editor.defaultFormatter": "ms-python.autopep8",
     "python.analysis.typeCheckingMode": "standard",
+    "python.testing.pytestArgs": [
+        "tests"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
     "[css]": {
         "editor.defaultFormatter": "vscode.css-language-features"
     }
