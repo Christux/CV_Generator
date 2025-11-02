@@ -38,11 +38,28 @@ content:
     - title: Compétences
       content: |
         - **{mb-info-color:Développement full stack d'applications de gestion}**
-            - Back-end en C#.NET via ApiController, Entity Framework et SQL Server
-            - Front-end en Angular, AngularJS, Material et RxJS
+            - Back-end en C#.**[{mb-info-color:NET}](https://www.microsoft.com/net)** via ApiController, Entity Framework et SQL Server
+            - Front-end en **[{mb-info-color:Angular}](https://angular.io/)**, **[{mb-info-color:AngularJS}](https://angularjs.org/)**, Material et RxJS
             - Développement de workflows et système de gestion de droits
         - **Architecture logicielle**
             - 3-tiers, REST full
             - Design patterns
         - **Gestion de projets**
             - Développement agile, SCRUM, extreme programming
+    - title: Expériences
+      content: |
+        - Depuis 2017 : **{mb-info-color:Développeur freelance de logiciels de gestion}** à la Banque Populaire Auvergne Rhône Alpes à Corenc
+        - 2015-2016 : Chef de projet en recherche et développement au CEA-LETI à Grenoble
+        - 2014 : Chargé de projet en recherche et développement chez SIMTEC à Grenoble
+        - 2013-2014 : Chargé de projet en recherche et développement au CEA-LETI à Grenoble
+        - 2009-2012 : Doctorant au Laboratoire de Génie Electrique de Grenoble
+        - 2009 : Stagiaire de fin d'étude au CEA-LETI à Grenoble
+    - title: Formation
+      content: |
+        - **Doctorat en Génie Electrique**
+        - Master professionnel en physique
+        - Licence de Physique-Chimie
+
+
+
+
