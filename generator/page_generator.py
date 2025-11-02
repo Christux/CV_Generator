@@ -16,49 +16,49 @@ class PageGenerator():
         self._app_config = app_config
 
     def _convert_markdown(self, data: Any, key: str | None = None) -> Any:
-        
+
         if key == 'content' and isinstance(data, str):
             if self._app_config.debug:
                 print(data)
             return markdown.markdown(data)
-        
+
         if isinstance(data, list):
             return [self._convert_markdown(x) for x in data]
 
         if isinstance(data, dict):
             return {k: self._convert_markdown(v, k) for k, v in data.items()}
-        
+
         return data
-    
+
     def _transform_braces_to_span(self, text: str) -> str:
-        # {red:Python} → <span class="red">Python</span>
         pattern = r"\{([\w-]+):(.+?)\}"
         return re.sub(pattern, r'<span class="\1">\2</span>', text, flags=re.DOTALL)
 
     def _apply_style_tags(self, data: Any) -> Any:
-        
+
         if isinstance(data, str):
             if self._app_config.debug:
                 print(data)
             return self._transform_braces_to_span(text=data)
-        
+
         if isinstance(data, list):
             return [self._apply_style_tags(x) for x in data]
-        
+
         if isinstance(data, dict):
             if self._app_config.debug:
                 print(data)
             return {k: self._apply_style_tags(v) for k, v in data.items()}
-        
+
         return data
 
     def _render_template(self, data: Any) -> str:
         env = Environment(
-            loader=FileSystemLoader(searchpath=self._app_config.abs_template_folder_path),
+            loader=FileSystemLoader(
+                searchpath=self._app_config.abs_template_folder_path),
             autoescape=False)
         template = env.get_template(name=self._app_config.base_template)
         return template.render(**data)
-    
+
     def _render_site_map(self, data: Any) -> str:
         with open(file=self._app_config.abs_sitemap, mode="r", encoding="utf-8") as f:
             template = Template(f.read())
@@ -80,11 +80,15 @@ class PageGenerator():
 
         css_src = os.path.join(self._app_config.asset_folder, "css")
         js_src = os.path.join(self._app_config.asset_folder, "js")
-        css_out = os.path.join(self._app_config.dist_folder, "css", f"{self._app_config.css_file_name}.{build_id}.css")
-        js_out = os.path.join(self._app_config.dist_folder, "js", f"{self._app_config.js_file_name}.{build_id}.js")
+        css_out = os.path.join(self._app_config.dist_folder, "css",
+                               f"{self._app_config.css_file_name}.{build_id}.css")
+        js_out = os.path.join(self._app_config.dist_folder, "js",
+                              f"{self._app_config.js_file_name}.{build_id}.js")
 
-        os.makedirs(os.path.join(self._app_config.dist_folder, "css"), exist_ok=True)
-        os.makedirs(os.path.join(self._app_config.dist_folder, "js"), exist_ok=True)
+        os.makedirs(os.path.join(
+            self._app_config.dist_folder, "css"), exist_ok=True)
+        os.makedirs(os.path.join(
+            self._app_config.dist_folder, "js"), exist_ok=True)
 
         self._cleanup_old_assets()
 
@@ -96,11 +100,13 @@ class PageGenerator():
         if os.path.isdir(js_src):
             self._concat_files(js_src, js_files, [".js"], js_out)
 
-        self._copy_extra_assets(self._app_config.asset_folder, self._app_config.dist_folder)
+        self._copy_extra_assets(
+            self._app_config.asset_folder, self._app_config.dist_folder)
 
     def _cleanup_old_assets(self):
 
-        css_pattern = os.path.join(self._app_config.dist_folder, "css", "*.css")
+        css_pattern = os.path.join(
+            self._app_config.dist_folder, "css", "*.css")
         js_pattern = os.path.join(self._app_config.dist_folder, "js", "*.js")
         removed = []
 
@@ -131,7 +137,8 @@ class PageGenerator():
                     with open(src_path, "r", encoding="utf-8") as infile:
                         outfile.write(f"/* {fname} */\n")
                         outfile.write(infile.read().strip() + "\n\n")
-                        print(f"Added to {os.path.basename(out_file)} : {fname}")
+                        print(
+                            f"Added to {os.path.basename(out_file)} : {fname}")
             else:
                 for fname in sorted(os.listdir(src_dir)):
                     if os.path.splitext(fname)[1] in extensions:
@@ -139,8 +146,8 @@ class PageGenerator():
                         with open(src_path, "r", encoding="utf-8") as infile:
                             outfile.write(f"/* {fname} */\n")
                             outfile.write(infile.read().strip() + "\n\n")
-                            print(f"Added to {os.path.basename(out_file)} : {fname}")
-
+                            print(
+                                f"Added to {os.path.basename(out_file)} : {fname}")
 
     def _copy_extra_assets(self, src_dir, dst_dir):
 
@@ -203,7 +210,7 @@ class PageGenerator():
         os.makedirs(self._app_config.dist_folder, exist_ok=True)
 
         assets_conf = config.get("assets")
-        
+
         self._build_assets(build_id, assets_conf)
 
         html_output = self._render_template(data=data)
@@ -214,5 +221,6 @@ class PageGenerator():
 
         sitemap = self._render_site_map(data=data)
         self._save_sitemap(sitemap=sitemap)
-        
-        print(f"CV built successefully : {self._app_config.abs_dist_page_path}")
+
+        print(
+            f"CV built successefully : {self._app_config.abs_dist_page_path}")

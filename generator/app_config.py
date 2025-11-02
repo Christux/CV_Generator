@@ -23,7 +23,7 @@ class AppConfig():
     @property
     def abs_dist_page_path(self) -> str:
         return os.path.join(self.dist_folder, self.page_name)
-    
+
     @property
     def abs_sitemap(self) -> str:
         return os.path.join(self.template_folder, self.sitemap)

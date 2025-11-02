@@ -34,7 +34,7 @@ class App():
 
         group.add_argument('--dev-server', action='store_true',
                            help='enable developpement server')
-        
+
         group.add_argument('--upload', action='store_true',
                            help='upload to web server with FTP')
 
