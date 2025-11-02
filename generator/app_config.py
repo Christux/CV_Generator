@@ -10,6 +10,7 @@ class AppConfig():
         self.credential_file = 'credentials.yaml'
         self.dist_folder = 'dist'
         self.page_name = 'index.html'
+        self.sitemap = 'sitemap.xml'
         self.template_folder = 'templates'
         self.base_template = 'base.html'
         self.asset_folder = 'assets'
@@ -22,6 +23,14 @@ class AppConfig():
     @property
     def abs_dist_page_path(self) -> str:
         return os.path.join(self.dist_folder, self.page_name)
+    
+    @property
+    def abs_sitemap(self) -> str:
+        return os.path.join(self.template_folder, self.sitemap)
+
+    @property
+    def abs_dist_sitemap(self) -> str:
+        return os.path.join(self.dist_folder, self.sitemap)
 
     @property
     def abs_template_folder_path(self) -> str:

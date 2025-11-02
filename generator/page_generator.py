@@ -6,7 +6,7 @@ import shutil
 from typing import Any
 import yaml
 import markdown
-from jinja2 import Environment, FileSystemLoader
+from jinja2 import Environment, FileSystemLoader, Template
 from generator.app_config import AppConfig
 
 
@@ -56,9 +56,12 @@ class PageGenerator():
         env = Environment(
             loader=FileSystemLoader(searchpath=self._app_config.abs_template_folder_path),
             autoescape=False)
-
         template = env.get_template(name=self._app_config.base_template)
-
+        return template.render(**data)
+    
+    def _render_site_map(self, data: Any) -> str:
+        with open(file=self._app_config.abs_sitemap, mode="r", encoding="utf-8") as f:
+            template = Template(f.read())
         return template.render(**data)
 
     def _add_hot_reload_script(self, html: str) -> str:
@@ -161,9 +164,13 @@ class PageGenerator():
             data = yaml.safe_load(stream=file)
         return data
 
-    def _save_page(self, html) -> None:
+    def _save_page(self, html: str) -> None:
         with open(file=self._app_config.abs_dist_page_path, mode="w", encoding="utf-8") as file:
             file.write(html)
+
+    def _save_sitemap(self, sitemap: str) -> None:
+        with open(file=self._app_config.abs_dist_sitemap, mode="w", encoding="utf-8") as file:
+            file.write(sitemap)
 
     def build_page(self) -> None:
 
@@ -171,10 +178,12 @@ class PageGenerator():
         data = self._load_data()
 
         build_id = datetime.now().strftime("%Y%m%d%H%M%S")
-        build_date = datetime.now().year
+        build_year = datetime.now().year
+        build_date = datetime.now().strftime("%Y-%m-%d")
 
         data['build_id'] = build_id
         data['build_date'] = build_date
+        data['build_year'] = build_year
 
         data['html'] = {
             'css_file_name': self._app_config.css_file_name,
@@ -202,5 +211,8 @@ class PageGenerator():
         html_output = self._add_hot_reload_script(html_output)
 
         self._save_page(html=html_output)
+
+        sitemap = self._render_site_map(data=data)
+        self._save_sitemap(sitemap=sitemap)
         
         print(f"CV built successefully : {self._app_config.abs_dist_page_path}")
