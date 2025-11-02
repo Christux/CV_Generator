@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /img/photo/
+Disallow: /img/logo/
+Sitemap: http://rubeck.christophe.free.fr/sitemap.xml
