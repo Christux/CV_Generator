@@ -27,3 +27,10 @@ pages:
 header:
   photo: "ChristopheRubeck.jpg"
   job_title: "Consultant en Data Science"
+assets:
+  css:
+    - bambo.css
+    - style.css
+  js:
+    - bambo.js
+    - cv.js

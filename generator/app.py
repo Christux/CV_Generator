@@ -11,7 +11,7 @@ class App():
     def __init__(self, app_config: AppConfig) -> None:
         self.app_config = app_config
 
-    def parse_arguments(self, argv: list[str] | None) -> Namespace:
+    def _parse_arguments(self, argv: list[str] | None) -> Namespace:
 
         parser = ArgumentParser(
             description="CV Generator",
@@ -52,7 +52,7 @@ class App():
         args = Namespace()
 
         try:
-            args = self.parse_arguments(argv)
+            args = self._parse_arguments(argv)
 
             if args.debug:
                 print("Debuggin mode")

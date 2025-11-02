@@ -5,7 +5,6 @@ class AppConfig():
     def __init__(self) -> None:
         self.debug = False
         self.dev_server = False
-        self.module_path = ''
         self.config_file = 'config.yaml'
         self.dist_folder = 'dist'
         self.page_name = 'index.html'
@@ -15,6 +14,8 @@ class AppConfig():
         self.server_host = 'localhost'
         self.server_port = 8080
         self.server_websocket_port = 8765
+        self.css_file_name = 'style'
+        self.js_file_name = 'script'
 
     @property
     def abs_dist_page_path(self) -> str:
