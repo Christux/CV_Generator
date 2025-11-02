@@ -1,0 +1,30 @@
+# Data
+name: "Christophe Rubeck"
+head:
+  titre: "Christophe Rubeck: Data Scientist"
+  url: "http://rubeck.christophe.free.fr/"
+  description: |
+    Bienvenue sur le Curriculum Vitae de Christophe Rubeck, Data Scientist, spécialiste en analyse de données, modélisation, et machine learning.
+  photo: "ChristopheRubeck-big.jpg"
+  google_key: "GMDGqJyP4roEHJwDaANDACPNu-ygvlmy5CrXF7mP-d0"
+github: "https://github.com/Christux/CV_Generator.git"
+menu:
+  - "accueil"
+  - "competences"
+  - "experiences"
+  - "formation"
+  - "interet"
+  - "reseaux"
+  - "publications"
+pages:
+  accueil: "Accueil"
+  experiences: "Expériences"
+  competences: "Compétences"
+  formation: "Formations"
+  interet: "Centres d'intêrets"
+  publications: "Publications"
+  these: "Travaux de thèse"
+  reseaux: "Réseaux"
+header:
+  photo: "ChristopheRubeck.jpg"
+  job_title: "Consultant en Data Science"

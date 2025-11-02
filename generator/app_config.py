@@ -6,6 +6,8 @@ class AppConfig():
         self.debug = False
         self.dev_server = False
         self.config_file = 'config.yaml'
+        self.data_file = 'data.yaml'
+        self.credential_file = 'credentials.yaml'
         self.dist_folder = 'dist'
         self.page_name = 'index.html'
         self.template_folder = 'templates'

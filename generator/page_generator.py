@@ -122,10 +122,24 @@ class PageGenerator():
                     os.makedirs(os.path.dirname(dst_path), exist_ok=True)
                     shutil.copy2(src_path, dst_path)
 
+    def _load_config(self) -> Any:
+        with open(file=self._app_config.config_file, mode="r", encoding="utf-8") as file:
+            config = yaml.safe_load(stream=file)
+        return config
+    
+    def _load_data(self) -> Any:
+        with open(file=self._app_config.data_file, mode="r", encoding="utf-8") as file:
+            data = yaml.safe_load(stream=file)
+        return data
+    
+    def _save_page(self, html) -> None:
+        with open(file=self._app_config.abs_dist_page_path, mode="w", encoding="utf-8") as file:
+            file.write(html)
+
     def build_page(self) -> None:
 
-        with open(file=self._app_config.config_file, mode="r", encoding="utf-8") as file:
-            data = yaml.safe_load(stream=file)
+        config = self._load_config()
+        data = self._load_data()
 
         build_id = datetime.now().strftime("%Y%m%d%H%M%S")
         build_date = datetime.now().year
@@ -146,16 +160,16 @@ class PageGenerator():
         # if self.app_config.debug:
         #     print(data)
 
-        assets_conf = data.get("assets")
+        os.makedirs(self._app_config.dist_folder, exist_ok=True)
+
+        assets_conf = config.get("assets")
+        
         self._build_assets(build_id, assets_conf)
 
         html_output = self._render_template(data=data)
 
         html_output = self._add_hot_reload_script(html_output)
 
-        os.makedirs(self._app_config.dist_folder, exist_ok=True)
-
-        with open(file=self._app_config.abs_dist_page_path, mode="w", encoding="utf-8") as file:
-            file.write(html_output)
-
+        self._save_page(html=html_output)
+        
         print(f"CV built successefully : {self._app_config.abs_dist_page_path}")
