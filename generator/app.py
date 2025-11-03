@@ -35,8 +35,11 @@ class App():
         group.add_argument('--dev-server', action='store_true',
                            help='enable developpement server')
 
-        group.add_argument('--upload', action='store_true',
+        group.add_argument('--ftp-upload', action='store_true',
                            help='upload to web server with FTP')
+
+        group.add_argument('--ftp-get-tree', action='store_true',
+                           help='get folder tree from web server with FTP')
 
         parser.add_argument('--open-browser', action='store_true',
                             help='open browser at startup')
@@ -90,10 +93,12 @@ class App():
 
                 server.serve()
 
-            if args.upload:
+            if args.ftp_upload:
                 print('Upload to server')
                 uploader = FTPUploader(app_config=self._app_config)
                 uploader.upload()
+
+            
 
         except Exception as e:
             print('Sorry, something went wrong !')

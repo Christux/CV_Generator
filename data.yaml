@@ -8,23 +8,15 @@ head:
   photo: ChristopheRubeck-big.jpg
   google_key: GMDGqJyP4roEHJwDaANDACPNu-ygvlmy5CrXF7mP-d0
 github: "https://github.com/Christux/CV_Generator.git"
-menu:
-  - accueil
-  - competences
-  - experiences
-  - formation
-  - interet
-  - reseaux
-  - publications
 pages:
   accueil: Accueil
-  experiences: Expériences
   competences: Compétences
+  experiences: Expériences
   formation: Formations
   interet: Centres d'intêrets
-  publications: Publications
-  these: Travaux de thèse
   reseaux: Réseaux
+  publications: Publications
+  #these: Travaux de thèse
 header:
   photo: ChristopheRubeck.jpg
   job_title: Consultant en Data Science
@@ -59,6 +51,132 @@ content:
         - **Doctorat en Génie Electrique**
         - Master professionnel en physique
         - Licence de Physique-Chimie
+  competences:
+    - title: Informatique scientifique
+      content: |
+        - **Traitement du signal**, analyse de données
+        - **Modélisation numérique** par éléments finis
+        - Développement de modèles analytiques
+        - Développement de modèles en circuits électriques équivalents
+        - Progiciels : **Matlab**, **COMSOL Multiphysics**
+    - title: Gestion de projets
+      content: |
+        - Bon relationnel
+        - Organisation de réunions
+        - Rédaction de rapports
+        - Gestion des sous-traitants
+        - Veille technologique
+        - Bibliographie
+    - title: Applications scientifiques
+      content: |
+        - Impédance, BioImpédance
+        - Neurologie
+        - Caractérisation d'électrodes
+    - title: Langues
+      content: |
+        - **Anglais** : anglais professionnel, rédaction de publications, conférences
+        - Allemand : bases scolaires, réactivable
+  experiences:
+    - title: Développeur freelance de logiciels de gestion
+      company: 
+        name: Banque Populaire Auvergne Rhône Alpes
+        link: https://www.bpaura.banquepopulaire.fr/
+        place: Corenc
+      date: Depuis 2017
+      content: |
+        - **Développement d’applications de gestion**
+        - Développement d'outils de gestion électronique de documents
+        - Développement d'outils de pilotage
+        - **C#.NET**
+        - WebAPI
+        - **Angular**, AngularJS
+        - Material Design
+    - title: Chargé de projet en recherche et développement
+      company:
+        name: CEA-LETI
+        link: http://www-leti.cea.fr/
+        place: Grenoble
+      date: 2015-2016
+      content: |
+        - **Développement d’un capteur d’impédance** pour l’aide au diagnostique médical dans le cadre du projet Swan-iCare
+        - Gestion de projet, reporting, meeting
+        - Accompagnement d’un **essai clinique** au CHU de Grenoble
+        - **Traitement des données** issues de l’essai clinique
+        - Résolution de problèmes via modélisation numérique
+        - Dimensionnement de capteurs, plans d’expérience
+    - title: Chargé de projet en recherche et développement
+      company:
+        name: SIMTEC
+        link: http://www.simtecsolution.fr/
+        place: Grenoble
+      date: 2014
+      content: |
+        - Développement d’un modèle biologique de peau
+        - Développement des aspects théoriques de la méthode de mesure
+    - title: Chargé de projet en recherche et développement
+      company:
+        name: CEA-LETI
+        link: http://www-leti.cea.fr/
+        place: Grenoble
+      date: 2013-2014
+      content: |
+        - **Modélisation de l’enregistrement de l’activité nerveuse** dans le cadre du projet INTENSE
+        - Développement de modèles **éléments finis** et analytiques
+        - Participation au design des électrodes et de la chaine d’acquisition
+        - Spectroscopie d’impédance (simulations et mesures)
+        - Présentation orale lors d’une conférence internationale
+    - title: Doctorant
+      company:
+        name: Laboratoire de Génie Electrique de Grenoble
+        link: http://www.g2elab.grenoble-inp.fr/
+        place: Grenoble
+      date: 2009-2012
+      content: |
+        - Calcul hautes performances par méthodes intégrales
+        - Développement de codes de modélisation en électromagnétisme
+        - Exploitation de l’architecture GPGPU pour accélérer les calculs
+        - Réduction des besoins en mémoire vive par de la compression matricielle par ondelettes
+        - Veille technologique
+    - title: Stagiaire de fin d’étude
+      company:
+        name: CEA-LETI
+        link: http://www-leti.cea.fr/
+        place: Grenoble
+      date: 2009
+      content: |
+        - Modélisation d’un capteur de sueur par éléments finis
+        - Mesures expérimentales d’impédances sur des électrodes
+    - title: Stagiaire de maîtrise
+      company:
+        name: Laboratoire de Physique des Milieux Denses
+        link: http://lcp-a2mc.univ-lorraine.fr/
+        place: Metz
+      date: 2007
+      content: |
+        - Modélisation des propriétés de solutions de protéines globulaires
+    - title: Année d’études à l'étranger
+      company:
+        name: Université du Québec à Trois-Rivières
+        link: http://www.uqtr.ca/
+        place: Canada
+        singular: true
+      date: 2006-2007
+      content: |
+        - Adaptation à un milieu et à des méthodes de travail différents
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
