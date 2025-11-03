@@ -8,6 +8,7 @@ head:
   photo: ChristopheRubeck-big.jpg
   google_key: GMDGqJyP4roEHJwDaANDACPNu-ygvlmy5CrXF7mP-d0
 github: "https://github.com/Christux/CV_Generator.git"
+# Sections of the page
 pages:
   accueil: Accueil
   competences: Compétences
@@ -16,10 +17,13 @@ pages:
   interet: Centres d'intêrets
   reseaux: Réseaux
   publications: Publications
+# Header
 header:
   photo: ChristopheRubeck.jpg
   job_title: Consultant en Data Science
+# Content
 content:
+  # Welcome part
   accueil:
     - title: Présentation
       content: |
@@ -50,6 +54,7 @@ content:
         - **Doctorat en Génie Electrique**
         - Master professionnel en physique
         - Licence de Physique-Chimie
+  # Skill part
   competences:
     - title: Informatique scientifique
       content: |
@@ -75,6 +80,7 @@ content:
       content: |
         - **Anglais** : anglais professionnel, rédaction de publications, conférences
         - Allemand : bases scolaires, réactivable
+  # Experiences part
   experiences:
     - title: Développeur freelance de logiciels de gestion
       company: 
@@ -167,22 +173,151 @@ content:
       content: |
         - Adaptation à un milieu et à des méthodes de travail différents
       hidden: true
+  # Education
+  formations:
+    - title: Reconversion en informatique de gestion
+      company:
+        name: M2i Formation
+        link: https://www.m2iformation.fr/
+        place: Grenoble
+      date: 2016-2017
+      content: |
+        Reconversion professionnelle en informatique de gestion orientée Java web.  
+        Contenu :
+
+        - Langages : Java, C#.NET, HTML, CSS, JavaScript
+        - Frameworks : JavaFX, JPA (Hibernate), Entity Framework, Spring, Android, AngularJS
+        - Bases de données : PostgreSQL, Microsoft SQL Server, MongoDB, MySQL
+        - Méthodologie : UML, développement AGILE et SCRUM, TDD, design patterns
+    - title: Doctorat en Génie Electrique
+      company: 
+        name: Universités de Grenoble
+        link: http://www.univ-grenoble-alpes.fr/
+        place: Grenoble
+      date: 2009-2012
+      content: |
+        Formations suivies en parallèle des travaux de recherche.
+
+        - Génie Electrique
+        - Programmation parallèle (multi-CPU, réseau, GPGPU)
+        - Génie logiciel
+        - Anglais
+        - Gestion du temps
+        - Création d’entreprise
+        - Insertion professionnelle (association Valoridoc)
+    - title: Master professionnel en physique, spécialité modélisation et simulation des systèmes physiques industriels
+      company:
+        name: Université Joseph Fourier
+        link: http://www.ujf-grenoble.fr/
+        place: Grenoble
+      date: 2008-2009
+      content: |
+        Achèvement d’une formation en physique par une formation professionnelle de niveau ingénieur. Acquisitions de
+        techniques de modélisation et simulation numériques de phénomènes physiques. Applications des concepts de
+        modélisation dans différentes spécialités de physique appliquée (mécanique des fluides, thermodynamique,
+        ...).  
+        Contenu des enseignements :
+
+        - Traitement du signal
+        - Méthodes numériques (éléments finis, volumes finis, ... )
+        - Analyse numérique
+        - Calcul scientifique
+        - Modélisation de phénomènes physiques
+        - Gestion de projets
+      hidden: true
+    - title: Maitrise de Physique-Chimie, préparation aux concours de l'enseignement
+      company:
+        name: Université Louis Pasteur
+        link: http://www.unistra.fr/
+        place: Strasbourg
+      date: 2007-2008
+      content: |
+        Consolidation des acquis de maîtrise de physique avec un cursus adapté à la préparation aux concours de
+        l’enseignement, notamment une formation en chimie.  
+        Programme :
+
+        - Optique
+        - Cristallographie
+        - Physique des fluides
+        - Chimie organique et inorganique
+        - Analyse, spectroscopie
+        - TP physique et TP chimie
+      hidden: true
+    - title: Maitrise de Physique
+      company:
+        name: Université du Québec à Trois-Rivières
+        link: http://www.uqtr.ca/
+        place: Canada
+        singular: true
+      date: 2006-2007
+      content: |
+        Maîtrise de physique effectuée au Canada dans le cadre d’un échange d’étudiants.
+
+        - Mécanique quantique et relativité
+        - Etudes d’articles scientifiques
+        - Mécanique des fluides
+        - Astrophysique
+        - Informatique scientifique
+      hidden: true
+    - title: Licence de Physique-Chimie
+      company:
+        name: Université Paul Verlaine
+        link: http://www.univ-lorraine.fr/
+        place: Metz
+      date: 2003-2006
+      content: |
+        Assimilation des bases en physique fondamentale et appliquée.
+
+        - Mécanique du point et du solide
+        - Electromagnétisme
+        - Electronique
+        - Optique
+        - Matériaux
+        - Physique des fluides
+        - Thermodynamique
+        - Mécanique quantique
+        - Relativité restreinte
+        - Résolution de systèmes d’équations linéaires
+        - Résolution d'équation différentielles
+        - Chimie organique
+        - Chimie inorganique
+
+        Obtention de l’ancien diplôme "DEUG science de la matière".
+      hidden: true
+    - title: Baccalauréat scientifique
+      company:
+        name: Lycée Henri Nominé
+        link: http://www4.ac-nancy-metz.fr/lyc-henri-nomine-sarreguemines/
+        place: sarreguemines
+      date: 2003
+      content: ""
+      hidden: true
+  interets:
+    - title: Activitées sportives
+      content: |
+        - Randonnée en montagne
+        - Course à pied
+        - Vélo/VTT
+      images: ['DSC02093', 'DSC02140', 'DSC07086', 'DSC07570', 'DSC08801', 'DSC08930', 'DSC00343', 'DSC04047', 'DSC09906', 'DSC02786', 'DSC01890']
+      interval: 1800
+    - title: Domotique
+      content: |
+        - Electronique, programmation de microcontrôleurs
+        - Serveur web, serveur de fichiers
+        - Service de sauvegarde automatique
+        - Webcam de surveillance, VPN
+      images: ['DSC02515', 'DSC08261', 'DSC08310', 'DSC00561', 'DSC08270',  'DSC02335', 'DSC01760']
+      interval: 2100
+    - title: Autres
+      content: |
+        - Cinéma
+        - Documentaires
+        - Astronomie
+      images: ['LUNE', 'SATURNE01', 'JUPITER01', 'SATURNE02', 'TELESCOPE01']
+      interval: 2300
+
+
+
 
 
  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

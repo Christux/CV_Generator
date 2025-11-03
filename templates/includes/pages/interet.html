@@ -1,0 +1,34 @@
+{% macro content_column(item) %}
+<td style="width:50%;">
+    <article class="item">
+        <h3 class="titre mb-warn-color">{{ item.title }}</h3>
+        <div class="contenu">
+            {{ item.content }}
+        </div>
+    </article>
+</td>
+{% endmacro %}
+
+{% macro caroussel_column(item) %}
+<td>
+    <caroussel interval="{{ item.interval }}">
+        {% for image in item.images %}
+            <img src="./img/photo/{{ image }}.JPG" alt="{{ image }}" class="caroussel-item {% if not loop.first %} hidden {% endif %}" />
+        {% endfor %}
+    </caroussel>
+</td>
+{% endmacro %}
+
+<table style="width:100%;">
+{% for item in content.interets %}
+    <tr>
+        {% if loop.index is odd %}
+            {{ content_column(item) }}
+            {{ caroussel_column(item) }}
+        {% else %}
+            {{ caroussel_column(item) }}
+            {{ content_column(item) }}
+        {% endif %}
+    </tr>
+{% endfor %}
+</table>
