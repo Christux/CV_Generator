@@ -16,7 +16,6 @@ pages:
   interet: Centres d'intêrets
   reseaux: Réseaux
   publications: Publications
-  #these: Travaux de thèse
 header:
   photo: ChristopheRubeck.jpg
   job_title: Consultant en Data Science
@@ -125,6 +124,7 @@ content:
         - Participation au design des électrodes et de la chaine d’acquisition
         - Spectroscopie d’impédance (simulations et mesures)
         - Présentation orale lors d’une conférence internationale
+      hidden: true
     - title: Doctorant
       company:
         name: Laboratoire de Génie Electrique de Grenoble
@@ -137,6 +137,7 @@ content:
         - Exploitation de l’architecture GPGPU pour accélérer les calculs
         - Réduction des besoins en mémoire vive par de la compression matricielle par ondelettes
         - Veille technologique
+      hidden: true
     - title: Stagiaire de fin d’étude
       company:
         name: CEA-LETI
@@ -146,6 +147,7 @@ content:
       content: |
         - Modélisation d’un capteur de sueur par éléments finis
         - Mesures expérimentales d’impédances sur des électrodes
+      hidden: true
     - title: Stagiaire de maîtrise
       company:
         name: Laboratoire de Physique des Milieux Denses
@@ -154,6 +156,7 @@ content:
       date: 2007
       content: |
         - Modélisation des propriétés de solutions de protéines globulaires
+      hidden: true
     - title: Année d’études à l'étranger
       company:
         name: Université du Québec à Trois-Rivières
@@ -163,6 +166,8 @@ content:
       date: 2006-2007
       content: |
         - Adaptation à un milieu et à des méthodes de travail différents
+      hidden: true
+
 
  
 

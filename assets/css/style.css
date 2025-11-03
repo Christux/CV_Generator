@@ -363,7 +363,7 @@ footer a {
         padding:0.6em;
         border-radius: 0.6em;
         overflow:hidden;
-        display:block;
+        /* display:block; */
         margin-bottom: 1.4em;
     }
 

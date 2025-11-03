@@ -1,5 +1,5 @@
 {% for item in content.experiences %}
-<article class="item">
+<article class="item {% if item.hidden %}hidden{% endif %}">
 	<h3 class="titre mb-warn-color">{{ item.title }}</h3>
 	<div class="lieu mb-info-color"><a href="{{ item.company.link }}">{{ item.company.name }}</a> {% if item.company.singular %} au {% else %} à {% endif %} {{ item.company.place }}</div>
 	<div class="date">{{ item.date }}</div>
@@ -8,3 +8,7 @@
 	</div>
 </article>
 {% endfor %}
+
+<div class="right">
+	<button class="mb-button info show-more">Voir plus</button>
+</div>
