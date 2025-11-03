@@ -1,0 +1,10 @@
+<div itemscope itemtype="http://schema.org/Person">
+    {% for item in content.networks if not item.hidden %}
+    <article class="net-item">
+        <h3>{{ item.title }}</h3>
+        <a itemprop="url" rel="me" href="{{ item.link }}">
+            <img src="./img/logo/{{ item.logo }}" alt="{{ item.title }}" title="{{ item.title }}">
+        </a>
+    </article>
+    {% endfor %}
+</div>

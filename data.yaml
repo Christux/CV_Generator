@@ -315,9 +315,72 @@ content:
         - Astronomie
       images: ['LUNE', 'SATURNE01', 'JUPITER01', 'SATURNE02', 'TELESCOPE01']
       interval: 2300
+  networks:
+    - title: LinkedIn
+      link: https://www.linkedin.com/in/christophe-rubeck-b7481129
+      logo: linkedin.png
+    - title: GitHub
+      link: https://github.com/Christux
+      logo: github.png
+    - title: Stackblitz
+      link: https://stackblitz.com/@Christux
+      logo: stackblitz.png
+    - title: SourceForge
+      link: https://sourceforge.net/u/christux57/profile/
+      logo: sourceforge.png
+      hidden: true
+  publications:
+    - title: Journal
+      content: |
+        - Christophe Rubeck, Jean-Paul Yonnet, Hicham Allag, Benoît Delinchant, Olivier Chadebec. 
+          Analytical Calculation of Magnet Systems: Magnetic Field Created by Charged Triangles and Polyhedra. 
+          IEEE Transactions on Magnetics, Institute of Electrical and Electronics Engineers, 2013, 49 (1), pp.144-147 
+    - title: Conférences
+      content: |
+        - C. Rubeck, S. Bonnet, A. Bourgerette, S. Gharbi, C. Henry and S. Maubert (2014). 
+          A fast electroneurogram simulation for compound action potentials based on a semi Finite Element Method model, CEFC2014. 
+          **Présentation orale**.
+        - Bonnet, S., Rubeck, C., Agache, V., Bourgerette, A., Fuchs, O., Gharbi, S., ... & Henry, C. (2013, November). 
+          Selective ENG recordings using a multi-contact cuff electrode. 
+          In Neural Engineering (NER), 2013 6th International IEEE/EMBS Conference on (pp. 923-926). IEEE.
+        - Christophe Rubeck, Bertrand Bannwarth, Olivier Chadebec, Jean-Michel Guichon, Benoît Delinchant et al. 
+          Wavelet and block matrices compression of an integral method problem on General Purpose GPU (GPGPU) architecture. 
+          CEFC 2012, Nov 2012, Oita, Japan. 2012.
+        - Rubeck, C., Bannwarth, B., Chadebec, O., Guichon, J. M., Delinchant, B., & Yonnet, J. P. (2012). 
+          Compression par ondelettes de formulations intégrales sur architecture GPGPU. 
+          In Conférence Européenne sur les Méthodes Numériques en Electromagnétisme (NUMELEC 2012). 
+          **Présentation orale**.
+        - Christophe Rubeck, Jean-Paul Yonnet, Benoît Delinchant, Olivier Chadebec. 
+          Calcul analytique du potentiel et du champ magnétostatique créés par un aimant permanent de forme polyédrique uniformément aimanté. 
+          Electrotechnique du Futur(EF) 2011, Dec 2011, Belfort, France. 2011.
+        - Rubeck, C., Chadebec, O., Delinchant, B., Yonnet, J. P., & Coulomb, J. L. (2011, July). 
+          JCuda vectorized and parallelized computation strategy for solving integral equations in electromagnetism on a standard personal computer. 
+          In COMPUMAG 2011.
+    - title: Thèse
+      content: |
+        Christophe Rubeck. Calcul hautes performances pour les formulations intégrales en électromagnétisme basses fréquences Énergie électrique. 
+        Université de Grenoble, 2012. Français.
+  these:
+    title: >
+      Calcul hautes performances pour les formulations intégrales en électromagnétisme basses fréquences
+      Intégration, compression matricielle par ondelettes et résolution sur architecture GPGPU
+    content: |
+      **Résumé**
 
+      Les méthodes intégrales sont des méthodes particulièrement bien adaptées à la modélisation des systèmes électromagnétiques car 
+      contrairement aux méthodes par éléments finis elles ne nécessitent pas le maillage des matériaux inactifs tel que l'air. 
+      Ces modèles sont donc légers en termes de nombre de degrés de liberté. 
+      Cependant ceux sont des méthodes à interactions totales qui génèrent des matrices de systèmes d'équations pleines. 
+      Ces matrices sont longues à calculer en temps processeur et coûteuses à stocker dans la mémoire vive de l'ordinateur. 
+      Nous réduisons dans ces travaux les temps de calcul grâce au parallélisme, c'est-à-dire l'utilisation de plusieurs processeurs, 
+      notamment sur cartes graphiques (GPGPU). Nous réduisons également le coût du stockage mémoire via de la compression matricielle par 
+      ondelettes (il s'agit d'un algorithme proche de la compression d'images). C'est une compression par pertes, nous avons ainsi développé 
+      un critère pour contrôler l'erreur introduite par la compression. Les méthodes développées sont appliquées sur une formulation 
+      électrostatique de calcul de capacités, mais elles sont à priori également applicables à d'autres formulations.
 
+      **Mots clefs**
 
+      Calcul hautes performances, méthodes intégrales, compression matricielle par ondelettes, architecture GPGPU
 
-
+      [Voir le mémoire](https://www.theses.fr/169463761)
  

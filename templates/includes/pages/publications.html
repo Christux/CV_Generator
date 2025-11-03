@@ -1,0 +1,19 @@
+{% for item in content.publications %}
+<article class="item">
+    <h3 class="titre mb-warn-color">{{ item.title }}</h3>
+    <div class="contenu">
+        {{ item.content }}
+    </div>
+</article>
+{% endfor %}
+
+<div class="right">
+    <button class="mb-button info show-more">Voir détails ici</button>
+</div>
+
+<article class="item hidden">
+    <h3 class="titre mb-warn-color">{{ content.these.title }}</h3>
+    <div class="contenu">
+        {{ content.these.content }}
+    </div>
+</article>
