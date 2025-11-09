@@ -219,7 +219,7 @@
     
         return {
             $init: function() {
-                caroussels = $dom.select('.caroussel');
+                caroussels = $dom.select('caroussel');
             },
             $build: function() {
                 caroussels.forEach(function(caroussel){
