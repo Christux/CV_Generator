@@ -108,8 +108,11 @@
                 menu = $dom.select('#menu');
                 corps = $dom.select('#contenu');
     
-                enteteHeight = entete.nativeElement.offsetHeight;
-                padding = enteteHeight + menu.nativeElement.offsetHeight;
+                measureHeaderHeight();
+                padding = enteteHeight + menu.nativeElement.getBoundingClientRect().height; //.offsetHeight;
+
+                window.addEventListener('resize', measureHeaderHeight);
+                window.addEventListener('orientationchange', measureHeaderHeight);
             },
             $build: function() {
                 render($scroll.get());
@@ -122,7 +125,10 @@
         });
     
         //------------------------------------------------------------------
-    
+        function measureHeaderHeight() {
+            enteteHeight = entete.nativeElement.getBoundingClientRect().height; //offsetHeight;
+        }
+
         /*
         * Hides headerbar
         */
@@ -213,7 +219,7 @@
     
         return {
             $init: function() {
-                caroussels = $dom.select('caroussel');
+                caroussels = $dom.select('.caroussel');
             },
             $build: function() {
                 caroussels.forEach(function(caroussel){
@@ -305,8 +311,6 @@
             $final: function() {
     
                 var root = $dom.select('body').first().nativeElement;
-    
-                console.log(root);
             
                 discoverDOM(root, function(element){        
             

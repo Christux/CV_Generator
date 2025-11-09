@@ -8,6 +8,7 @@ import yaml
 import markdown
 from jinja2 import Environment, FileSystemLoader, Template
 from generator.app_config import AppConfig
+from generator.jinja_filters import first_date_filter
 
 
 class PageGenerator():
@@ -56,6 +57,7 @@ class PageGenerator():
             loader=FileSystemLoader(
                 searchpath=self._app_config.abs_template_folder_path),
             autoescape=False)
+        env.filters['first_date'] = first_date_filter
         template = env.get_template(name=self._app_config.base_template)
         return template.render(**data)
 

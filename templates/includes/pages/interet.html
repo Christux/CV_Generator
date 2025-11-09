@@ -13,7 +13,11 @@
 <td>
     <caroussel interval="{{ item.interval }}">
         {% for image in item.images %}
-            <img src="./img/photo/{{ image }}.JPG" alt="{{ image }}" class="caroussel-item {% if not loop.first %} hidden {% endif %}" />
+            {% if loop.first %}
+                <img src="./img/photo/{{ image }}.JPG" alt="{{ image }}" class="caroussel-item" />
+            {% else %}
+                <img src="" data-src="./img/photo/{{ image }}.JPG" alt="{{ image }}" class="caroussel-item hidden" loading="lazy"/>
+            {% endif %}
         {% endfor %}
     </caroussel>
 </td>

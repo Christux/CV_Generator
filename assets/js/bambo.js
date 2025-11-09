@@ -1152,18 +1152,14 @@ Module template :
 		var rootNode;
 
 		var alphabets = {
-			a: "4",
-			b: "8",
-			e: "3",
-			g: "6",
+			a: "@",
+			b: "ß",
+			c: "©",
+			e: "ε",
 			i: "1",
 			l: '|',
 			o: "0",
-			p: "9",
 			r: "®",
-			s: "5",
-			t: "7",
-			z: "2"
 		};
 
 		return {

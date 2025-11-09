@@ -131,7 +131,7 @@ header > .entete-contenu > .poste
 #contenu .item
 {
     padding-top: 0.6em;
-    padding-bottom: 0.6em;
+    padding-bottom: 1.6em;
 }
 
 #contenu .item > .titre
@@ -143,7 +143,7 @@ header > .entete-contenu > .poste
 #contenu .item > .sous-titre-gauche, .lieu
 {
     float:left;
-    margin-top:0.6em;
+    /* margin-top:0.6em; */
     font-size:110%;
     font-weight:bold;
 }

@@ -1,8 +1,8 @@
 {% for item in content.experiences %}
-<article class="item {% if item.hidden %}hidden{% endif %}">
-	<h3 class="titre mb-warn-color">{{ item.title }}</h3>
+<article class="item {% if item.hidden %}hidden{% endif %}" itemscope itemtype="https://schema.org/JobPosting">
+	<h3 class="titre mb-warn-color" itemprop="title">{{ item.title }}</h3>
 	<div class="lieu mb-info-color"><a href="{{ item.company.link }}">{{ item.company.name }}</a> {% if item.company.singular %} au {% else %} à {% endif %} {{ item.company.place }}</div>
-	<div class="date">{{ item.date }}</div>
+	<div class="date" itemprop="datePosted" datetime="{{ item.date|first_date}}">{{ item.date }}</div>
 	<div class="contenu">
 		{{ item.content }}
 	</div>

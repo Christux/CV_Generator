@@ -1,12 +1,26 @@
-# Data
+##########################
+# Data for CV generation #
+##########################
 name: Christophe Rubeck
 head:
-  titre: "Christophe Rubeck: Data Scientist"
+  titre: "Christophe Rubeck — Data Scientist & Développeur Fullstack"
   url: "http://rubeck.christophe.free.fr/"
-  description: |
-    Bienvenue sur le Curriculum Vitae de Christophe Rubeck, Data Scientist, spécialiste en analyse de données, modélisation, et machine learning.
+  job_title: Data Scientist & Développeur Fullstack
+  description: CV de Christophe Rubeck, Data Scientist et développeur fullstack à Grenoble, spécialisé en Python, IA générative, machine learning, et développement web Angular/.NET.
+  me: Christophe Rubeck est un Data Scientist et développeur fullstack basé à Grenoble, spécialisé en IA générative, machine learning, Python, .NET et Angular.
   photo: ChristopheRubeck-big.jpg
   google_key: GMDGqJyP4roEHJwDaANDACPNu-ygvlmy5CrXF7mP-d0
+  profiles:
+    linkedin: https://www.linkedin.com/in/christophe-rubeck-b7481129
+    github: https://github.com/Christux
+  knows_about: 
+    - Data Science
+    - Machine Learning
+    - Intelligence Artificielle
+    - Développement Web
+    - Python
+    - .NET
+    - Angular
 github: "https://github.com/Christux/CV_Generator.git"
 # Sections of the page
 pages:
@@ -20,31 +34,41 @@ pages:
 # Header
 header:
   photo: ChristopheRubeck.jpg
-  job_title: Consultant en Data Science
+  job_title: Consultant Data Scientist & Développeur Fullstack
+  description: Consultant en data science, spécialiste machine learning, modélisation et IA générative.
 # Content
 content:
-  # Welcome part
+  ################
+  # Welcome part #
+  ################
   accueil:
     - title: Présentation
       content: |
-        Consultant freelance en **Data Science**, je suis spécialiste de l'analyse de données, la modélisation et l'apprentissage automatique (Scikit-learn, Torch et Tensorflow).
+        Consultant freelance en **Data Science**, je suis spécialiste de l'analyse de données, la modélisation et l'apprentissage automatique (Scikit-learn), 
+        ainsi que de la **promotion de l'IA** et la **formation des collaborateurs** aux outils d'IA générative d'entreprise.
         Je possède également une seconde casquette de développeur fullstack de logiciels de gestion dans les technologies SQL Server, .NET (Entity Framework, Web Api)
         et Angular. Je suis actuellement en mission mais reste à l'écoute d'opportunités futures.
     - title: Compétences
       content: |
-        - **{mb-info-color:Développement full stack d'applications de gestion}**
-            - Back-end en C#.**[{mb-info-color:NET}](https://www.microsoft.com/net)** via ApiController, Entity Framework et SQL Server
-            - Front-end en **[{mb-info-color:Angular}](https://angular.io/)**, **[{mb-info-color:AngularJS}](https://angularjs.org/)**, Material et RxJS
-            - Développement de workflows et système de gestion de droits
-        - **Architecture logicielle**
-            - 3-tiers, REST full
-            - Design patterns
-        - **Gestion de projets**
-            - Développement agile, SCRUM, extreme programming
+        - **Acculturation** des collaborateurs à l'IA
+        - **Formation** des collaborateurs aux outils d'**IA générative** d'entreprise
+        - **Analyse et traitement de données**
+        - **Modélisation**, machine learning
+        - SQL (MySSQL, Teradata)
+        - **Notebooks** Jupyter
+        - Frameworks : Numpy, Pandas, Scikit-learn, Torch, Tensorflow
+        - **Python** : développement de modules, tests unitaires, industrialisation
+    - title: Autres Compétences
+      content: |
+        - Langages : **C#.NET**, Java, **JavaScript**, TypeScript, HTML, CSS
+        - Frameworks : **Angular**, AngularJS, Entity Framework, RxJS
+        - Bases de données : Microsoft SQL Server, MySQL
+        - Méthodologie : UML, développement AGILE et SCRUM, TDD, design patterns
     - title: Expériences
       content: |
-        - Depuis 2017 : **{mb-info-color:Développeur freelance de logiciels de gestion}** à la Banque Populaire Auvergne Rhône Alpes à Corenc
-        - 2015-2016 : Chef de projet en recherche et développement au CEA-LETI à Grenoble
+        - Depuis 2022 : **{mb-info-color:Data Scientist}** à la Banque Populaire Auvergne Rhône Alpes à Corenc
+        - 2017-2022 : **{mb-info-color:Développeur freelance de logiciels de gestion}** à la Banque Populaire Auvergne Rhône Alpes à Corenc
+        - 2015-2016 : Chargé de projet en recherche et développement au CEA-LETI à Grenoble
         - 2014 : Chargé de projet en recherche et développement chez SIMTEC à Grenoble
         - 2013-2014 : Chargé de projet en recherche et développement au CEA-LETI à Grenoble
         - 2009-2012 : Doctorant au Laboratoire de Génie Electrique de Grenoble
@@ -54,40 +78,56 @@ content:
         - **Doctorat en Génie Electrique**
         - Master professionnel en physique
         - Licence de Physique-Chimie
-  # Skill part
+  ##############
+  # Skill part #
+  ##############
   competences:
     - title: Informatique scientifique
       content: |
-        - **Traitement du signal**, analyse de données
+        - **Analyse et traitement de données**
+        - **Machine learning**
+        - **Traitement du signal**
         - **Modélisation numérique** par éléments finis
         - Développement de modèles analytiques
-        - Développement de modèles en circuits électriques équivalents
-        - Progiciels : **Matlab**, **COMSOL Multiphysics**
-    - title: Gestion de projets
+    - title: Développement logiciel
       content: |
-        - Bon relationnel
-        - Organisation de réunions
-        - Rédaction de rapports
-        - Gestion des sous-traitants
-        - Veille technologique
-        - Bibliographie
-    - title: Applications scientifiques
-      content: |
-        - Impédance, BioImpédance
-        - Neurologie
-        - Caractérisation d'électrodes
+        - **Langages** : **Python**, **C#.NET**, HTML, CSS, **JavaScript**, Typescript, C/C++
+        - Frameworks : Entity Framework, AngularJS & Angular
+        - Bases de données : PostgreSQL, Microsoft SQL Server, Teradata
+        - Méthodologie : UML, développement AGILE et SCRUM, TDD, design patterns
+        - Versionning : Git, SVN
+        - Systèmes d’exploitation : Windows, OS X, GNU/Linux
     - title: Langues
       content: |
         - **Anglais** : anglais professionnel, rédaction de publications, conférences
         - Allemand : bases scolaires, réactivable
-  # Experiences part
+        - Français : langue natale
+  ####################
+  # Experiences part #
+  ####################
   experiences:
+    - title: Data Scientist
+      company: 
+        name: Banque Populaire Auvergne Rhône Alpes
+        link: https://www.bpaura.banquepopulaire.fr/
+        place: Corenc
+      date: depuis 2022
+      content: |
+        - **Formation** des collaborateurs aux IA génératives d'entreprise
+        - **Analyse** de données
+        - **Développement de scores** d'appétence
+        - **Détection** de moments de vie du client
+        - **Classification** de texte, analyse de sentiments
+        - Interprétation des modèles avec les valeurs de Shapley
+        - SQL, OpenData
+        - Frameworks : Scikit-lean, Ollama
+        - **Python** : développement de modules, tests unitaires, industrialisation
     - title: Développeur freelance de logiciels de gestion
       company: 
         name: Banque Populaire Auvergne Rhône Alpes
         link: https://www.bpaura.banquepopulaire.fr/
         place: Corenc
-      date: Depuis 2017
+      date: 2017-2022
       content: |
         - **Développement d’applications de gestion**
         - Développement d'outils de gestion électronique de documents
@@ -114,7 +154,7 @@ content:
         name: SIMTEC
         link: http://www.simtecsolution.fr/
         place: Grenoble
-      date: 2014
+      date: "2014"
       content: |
         - Développement d’un modèle biologique de peau
         - Développement des aspects théoriques de la méthode de mesure
@@ -149,7 +189,7 @@ content:
         name: CEA-LETI
         link: http://www-leti.cea.fr/
         place: Grenoble
-      date: 2009
+      date: "2009"
       content: |
         - Modélisation d’un capteur de sueur par éléments finis
         - Mesures expérimentales d’impédances sur des électrodes
@@ -159,7 +199,7 @@ content:
         name: Laboratoire de Physique des Milieux Denses
         link: http://lcp-a2mc.univ-lorraine.fr/
         place: Metz
-      date: 2007
+      date: "2007"
       content: |
         - Modélisation des propriétés de solutions de protéines globulaires
       hidden: true
@@ -173,7 +213,9 @@ content:
       content: |
         - Adaptation à un milieu et à des méthodes de travail différents
       hidden: true
-  # Education
+  #############
+  # Education #
+  #############
   formations:
     - title: Reconversion en informatique de gestion
       company:
@@ -189,7 +231,7 @@ content:
         - Frameworks : JavaFX, JPA (Hibernate), Entity Framework, Spring, Android, AngularJS
         - Bases de données : PostgreSQL, Microsoft SQL Server, MongoDB, MySQL
         - Méthodologie : UML, développement AGILE et SCRUM, TDD, design patterns
-    - title: Doctorat en Génie Electrique
+    - title: Doctorat en Génie Electrique (PhD)
       company: 
         name: Universités de Grenoble
         link: http://www.univ-grenoble-alpes.fr/
@@ -289,23 +331,26 @@ content:
         name: Lycée Henri Nominé
         link: http://www4.ac-nancy-metz.fr/lyc-henri-nomine-sarreguemines/
         place: sarreguemines
-      date: 2003
+      date: "2003"
       content: ""
       hidden: true
+  #####################    
+  # Centre d'interets #
+  #####################    
   interets:
     - title: Activitées sportives
       content: |
         - Randonnée en montagne
-        - Course à pied
+        - Natation
         - Vélo/VTT
       images: ['DSC02093', 'DSC02140', 'DSC07086', 'DSC07570', 'DSC08801', 'DSC08930', 'DSC00343', 'DSC04047', 'DSC09906', 'DSC02786', 'DSC01890']
       interval: 1800
     - title: Domotique
       content: |
-        - Electronique, programmation de microcontrôleurs
-        - Serveur web, serveur de fichiers
-        - Service de sauvegarde automatique
-        - Webcam de surveillance, VPN
+        - Déploiement d'un environement domotique personnel ([Home Assistant](https://www.home-assistant.io/))
+        - Développement d'appareils connectés à base de microcontrôleurs et de nano ordinateurs
+        - Montages électroniques
+        - Serveur web, serveur de fichiers, sauvegarde automatique
       images: ['DSC02515', 'DSC08261', 'DSC08310', 'DSC00561', 'DSC08270',  'DSC02335', 'DSC01760']
       interval: 2100
     - title: Autres
@@ -315,6 +360,9 @@ content:
         - Astronomie
       images: ['LUNE', 'SATURNE01', 'JUPITER01', 'SATURNE02', 'TELESCOPE01']
       interval: 2300
+  ###################
+  # Réseaux sociaux #
+  ###################
   networks:
     - title: LinkedIn
       link: https://www.linkedin.com/in/christophe-rubeck-b7481129
@@ -329,6 +377,9 @@ content:
       link: https://sourceforge.net/u/christux57/profile/
       logo: sourceforge.png
       hidden: true
+  ################
+  # Publications #
+  ################
   publications:
     - title: Journal
       content: |
@@ -360,6 +411,9 @@ content:
       content: |
         Christophe Rubeck. Calcul hautes performances pour les formulations intégrales en électromagnétisme basses fréquences Énergie électrique. 
         Université de Grenoble, 2012. Français.
+  ##################
+  # Thesis details #
+  ##################
   these:
     title: >
       Calcul hautes performances pour les formulations intégrales en électromagnétisme basses fréquences
