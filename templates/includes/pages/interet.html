@@ -1,16 +1,16 @@
 {% macro content_column(item) %}
-<td style="width:50%;">
+<div class="table-cell">
     <article class="item">
         <h3 class="titre mb-warn-color">{{ item.title }}</h3>
         <div class="contenu">
             {{ item.content }}
         </div>
     </article>
-</td>
+</div>
 {% endmacro %}
 
 {% macro caroussel_column(item) %}
-<td>
+<div class="table-cell">
     <caroussel interval="{{ item.interval }}">
         {% for image in item.images %}
             {% if loop.first %}
@@ -20,19 +20,21 @@
             {% endif %}
         {% endfor %}
     </caroussel>
-</td>
+</div>
 {% endmacro %}
 
-<table style="width:100%;">
-{% for item in content.interets %}
-    <tr>
-        {% if loop.index is odd %}
-            {{ content_column(item) }}
-            {{ caroussel_column(item) }}
-        {% else %}
-            {{ caroussel_column(item) }}
-            {{ content_column(item) }}
-        {% endif %}
-    </tr>
-{% endfor %}
-</table>
+<div class="table">
+    <div class="table-body">
+    {% for item in content.interets %}
+        <div class="table-row">
+            {% if loop.index is odd %}
+                {{ content_column(item) }}
+                {{ caroussel_column(item) }}
+            {% else %}
+                {{ caroussel_column(item) }}
+                {{ content_column(item) }}
+            {% endif %}
+        </div>
+    {% endfor %}
+    </div>
+</div>

@@ -27,7 +27,7 @@
 }
 
 .logo {
-    width:80px;
+    width: 80px;
     opacity: 1;
     filter: sepia(100%) saturate(10000%) hue-rotate(175deg);
 }
@@ -41,18 +41,21 @@ caroussel {
 caroussel .caroussel-item {
     height: 100px;
     border-radius: 10px;
-    -webkit-filter: grayscale(50%); /* Safari 6.0 - 9.0 */
+    -webkit-filter: grayscale(50%);
+    /* Safari 6.0 - 9.0 */
     filter: grayscale(50%);
 }
 
 caroussel .caroussel-item:hover {
-    -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+    -webkit-filter: grayscale(0%);
+    /* Safari 6.0 - 9.0 */
     filter: grayscale(0%);
 }
 
 /* La page web */
 
-html, body {
+html,
+body {
     font-family: Roboto, arial, serif;
     font-size: 0.9em;
     scroll-behavior: smooth;
@@ -73,52 +76,46 @@ html, body {
 }
 
 /* L'entete */
-header
-{
+header {
     width: 100%;
     height: auto;
-    min-height:14em;
+    min-height: 14em;
     overflow: hidden;
 }
 
-header > .photo
-{
+header>.photo {
     display: none;
 }
 
-header > .entete-contenu
-{
+header>.entete-contenu {
     margin-left: 1em;
     margin-right: 1em;
     margin-bottom: 1em;
 }
 
-header > .entete-contenu > .titre
-{
-    font-size:250%;
+header>.entete-contenu>.titre {
+    font-size: 250%;
     padding-top: 0;
     margin-top: 0;
     margin-bottom: 0;
     margin-top: 1em;
     color: whitesmoke;
     text-decoration: none;
-    font-weight:bold;
+    font-weight: bold;
 }
 
-header > .entete-contenu > .poste
-{
-    font-size:160%;
-    font-weight:bold;
-    text-align:center;
+header>.entete-contenu>.poste {
+    font-size: 160%;
+    font-weight: bold;
+    text-align: center;
 }
 
 #contenu {
-    padding-left:0.6em;
+    padding-left: 0.6em;
     padding-right: 0.6em;
 }
 
-#contenu .titre-page
-{
+#contenu .titre-page {
     font-size: 250%;
     font-weight: bold;
     text-align: center;
@@ -128,88 +125,79 @@ header > .entete-contenu > .poste
     margin-top: 0.6em;
 }
 
-#contenu .item
-{
+#contenu .item {
     padding-top: 0.6em;
     padding-bottom: 1.6em;
 }
 
-#contenu .item > .titre
-{
-    font-size:150%;
-    font-weight:bold;
+#contenu .item>.titre {
+    font-size: 150%;
+    font-weight: bold;
 }
 
-#contenu .item > .sous-titre-gauche, .lieu
-{
-    float:left;
+#contenu .item>.sous-titre-gauche,
+.lieu {
+    float: left;
     /* margin-top:0.6em; */
-    font-size:110%;
-    font-weight:bold;
+    font-size: 110%;
+    font-weight: bold;
 }
 
-#contenu .item > .sous-titre-gauche, .lieu a
-{
+#contenu .item>.sous-titre-gauche,
+.lieu a {
     text-decoration: none;
 }
 
-#contenu .item > .sous-titre-gauche, .lieu a:hover
-{
+#contenu .item>.sous-titre-gauche,
+.lieu a:hover {
     text-decoration: none;
 }
 
-#contenu .item > .sous-titre-droit, .date
-{
-    text-align:right;
-    margin-top:0.3em;
-    margin-right:0.6em;
-    font-style : italic;
+#contenu .item>.sous-titre-droit,
+.date {
+    text-align: right;
+    margin-top: 0.3em;
+    margin-right: 0.6em;
+    font-style: italic;
 }
 
-#contenu .item > .contenu
-{
+#contenu .item>.contenu {
     width: 100%;
-    margin-top:0.3em;
-    text-align:justify;
+    margin-top: 0.3em;
+    text-align: justify;
 }
 
-#contenu .item > .contenu > a
-{
+#contenu .item>.contenu>a {
     text-decoration: none;
-    font-weight:bold;
+    font-weight: bold;
 }
 
 
-#contenu .item > .contenu ul
-{
+#contenu .item>.contenu ul {
     padding-left: 0.6em;
     margin-left: 0.6em;
     margin-bottom: 0;
 }
 
-#contenu .item > .contenu > li
-{
-    padding-top:0.1em;
+#contenu .item>.contenu>li {
+    padding-top: 0.1em;
 }
 
-#contenu .item fieldset
-{
-    margin-bottom:1.9em;
-    
+#contenu .item fieldset {
+    margin-bottom: 1.9em;
+
 }
 
-#contenu .item label
-{
-    float:left;
-    width:5em;
-    text-align:right;
+#contenu .item label {
+    float: left;
+    width: 5em;
+    text-align: right;
 }
 
-#contenu .item legend
-{
-    font-size:90%;
-    text-align:left;
-    font-weight:bold;
+#contenu .item legend {
+    font-size: 90%;
+    text-align: left;
+    font-weight: bold;
 }
 
 #interet h3 {
@@ -252,14 +240,13 @@ header > .entete-contenu > .poste
 
 /* Le pied de page */
 
-footer
-{
+footer {
     width: 100%;
     color: whitesmoke;
     text-align: center;
-    padding-top:1.8em;
+    padding-top: 1.8em;
     padding-bottom: 1em;
-    overflow:hidden;
+    overflow: hidden;
 }
 
 footer a {
@@ -272,27 +259,53 @@ footer a {
 
 /* Menu */
 .mb-menu-item {
-  max-width: 15%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  vertical-align: top;
+    max-width: 15%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: top;
 }
 
-.centre
-{
+.centre {
     text-align: center;
 }
 
-.gras
-{
-    font-weight:bold;
+.gras {
+    font-weight: bold;
 }
 
-.italique
-{
-    font-style : italic;
+.italique {
+    font-style: italic;
 }
+
+.table {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    border-spacing: 0 2em;
+}
+
+.table-header {
+    display: table-header-group;
+    font-weight: bold;
+}
+
+.table-body {
+    display: table-row-group;
+}
+
+.table-row {
+    display: table-row;
+}
+
+.table-cell {
+    width: 50%;
+    display: table-cell;
+    overflow-wrap: break-word;
+    white-space: normal;
+    vertical-align: middle;
+}
+
 
 @media only screen and (min-width: 480px) {
 
@@ -301,9 +314,9 @@ footer a {
         white-space: normal;
         overflow: initial;
         text-overflow: initial;
-      }
+    }
 
-      .mb-header {
+    .mb-header {
         text-align: center;
     }
 
@@ -314,36 +327,33 @@ footer a {
 
 @media only screen and (min-width : 800px) {
 
-    html, body
-    {
+    html,
+    body {
         font-size: 1em;
     }
 
-    header > .photo
-    {
-        width:14em;
-        height:14em;
-        display: inline-block;;
+    header>.photo {
+        width: 14em;
+        height: 14em;
+        display: inline-block;
+        ;
         position: relative;
     }
 
-    header > .photo > img
-    {
-        width:11em;
-        height:11em;
+    header>.photo>img {
+        width: 11em;
+        height: 11em;
         border-radius: 1em;
         margin-top: 1.4em;
     }
 
-    header > .entete-contenu
-    {
+    header>.entete-contenu {
         margin-left: 4em;
         display: inline-block;
         vertical-align: top;
     }
 
-    #contenu
-    {
+    #contenu {
         max-width: 800px;
         min-height: 45em;
         max-width: 45em;
@@ -351,18 +361,16 @@ footer a {
         margin-right: auto;
     }
 
-    #contenu .titre-page
-    {
+    #contenu .titre-page {
         padding-left: 1.2em;
     }
 
-    #contenu > .item
-    {
+    #contenu>.item {
         margin-left: 0.6em;
         margin-right: 0.6em;
-        padding:0.6em;
+        padding: 0.6em;
         border-radius: 0.6em;
-        overflow:hidden;
+        overflow: hidden;
         /* display:block; */
         margin-bottom: 1.4em;
     }
@@ -375,8 +383,7 @@ footer a {
         width: 130px;
     }
 
-    footer
-    {
+    footer {
         margin-top: 2em;
         z-index: 20;
     }

@@ -50,6 +50,8 @@ content:
         ainsi que de la **promotion de l'IA** et la **formation des collaborateurs** aux outils d'IA générative d'entreprise.
         Je possède également une seconde casquette de développeur fullstack de logiciels de gestion dans les technologies SQL Server, .NET (Entity Framework, Web Api)
         et Angular. Je suis actuellement en mission mais reste à l'écoute d'opportunités futures.
+
+        Je suis actuellement en portage salarial via la société **[Altros](https://www.altros.fr/)**.
     - title: Compétences
       content: |
         - **Acculturation** des collaborateurs à l'IA
@@ -146,7 +148,6 @@ content:
       date: 2015-2016
       content: |
         - **Développement d’un capteur d’impédance** pour l’aide au diagnostique médical dans le cadre du projet Swan-iCare
-        - Gestion de projet, reporting, meeting
         - Accompagnement d’un **essai clinique** au CHU de Grenoble
         - **Traitement des données** issues de l’essai clinique
         - Résolution de problèmes via modélisation numérique
@@ -171,7 +172,7 @@ content:
         - Développement de modèles **éléments finis** et analytiques
         - Participation au design des électrodes et de la chaine d’acquisition
         - Spectroscopie d’impédance (simulations et mesures)
-        - Présentation orale lors d’une conférence internationale
+        - Présentation orale lors d’une **conférence internationale**
       hidden: true
     - title: Doctorant
       company:
@@ -247,7 +248,6 @@ content:
         - Génie logiciel
         - Anglais
         - Gestion du temps
-        - Création d’entreprise
         - Insertion professionnelle (association Valoridoc)
     - title: Master professionnel en physique, spécialité modélisation et simulation des systèmes physiques industriels
       company:
@@ -267,7 +267,6 @@ content:
         - Analyse numérique
         - Calcul scientifique
         - Modélisation de phénomènes physiques
-        - Gestion de projets
       hidden: true
     - title: Maitrise de Physique-Chimie, préparation aux concours de l'enseignement
       company:
@@ -438,5 +437,5 @@ content:
 
       Calcul hautes performances, méthodes intégrales, compression matricielle par ondelettes, architecture GPGPU
 
-      [Voir le mémoire](https://www.theses.fr/169463761)
+      *[Voir le mémoire](https://www.theses.fr/169463761)*
  
