@@ -23,3 +23,7 @@ python -m generator --dev-server --open-browser --debug
 
 ### Production
 python -m generator --build
+
+### Find dead links
+To run after a build :
+python -m generator --find-dead-links --debug

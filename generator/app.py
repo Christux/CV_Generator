@@ -2,6 +2,7 @@ from argparse import ArgumentParser, ArgumentDefaultsHelpFormatter, Namespace
 import webbrowser
 from generator import __version__
 from generator.app_config import AppConfig
+from generator.dead_link_finder import DeadLinkFinder
 from generator.dev_server import DevServer
 from generator.ftp_uploader import FTPUploader
 from generator.page_generator import PageGenerator
@@ -40,6 +41,9 @@ class App():
 
         group.add_argument('--ftp-get-tree', action='store_true',
                            help='get folder tree from web server with FTP')
+        
+        group.add_argument('--find-dead-links', action='store_true',
+                           help='check for dead links')
 
         parser.add_argument('--open-browser', action='store_true',
                             help='open browser at startup')
@@ -97,6 +101,11 @@ class App():
                 print('Upload to server')
                 uploader = FTPUploader(app_config=self._app_config)
                 uploader.upload()
+
+            if args.find_dead_links:
+                print('Search for dead links...')
+                dead_link_finder = DeadLinkFinder(app_config=self._app_config)
+                dead_link_finder.find_dead_links_in_dist()
 
             
 

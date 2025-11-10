@@ -109,7 +109,7 @@ content:
     - title: Data Scientist
       company: 
         name: Banque Populaire Auvergne Rhône Alpes
-        link: https://www.bpaura.banquepopulaire.fr/
+        link: https://www.banquepopulaire.fr/bpaura/
         place: Corenc
       date: depuis 2022
       content: |
@@ -125,7 +125,7 @@ content:
     - title: Développeur freelance de logiciels de gestion
       company: 
         name: Banque Populaire Auvergne Rhône Alpes
-        link: https://www.bpaura.banquepopulaire.fr/
+        link: https://www.banquepopulaire.fr/bpaura/
         place: Corenc
       date: 2017-2022
       content: |
@@ -139,7 +139,7 @@ content:
     - title: Chargé de projet en recherche et développement
       company:
         name: CEA-LETI
-        link: http://www-leti.cea.fr/
+        link: https://www-leti.cea.fr/
         place: Grenoble
       date: 2015-2016
       content: |
@@ -152,7 +152,7 @@ content:
     - title: Chargé de projet en recherche et développement
       company:
         name: SIMTEC
-        link: http://www.simtecsolution.fr/
+        link: https://www.simtecsolution.fr/
         place: Grenoble
       date: "2014"
       content: |
@@ -161,7 +161,7 @@ content:
     - title: Chargé de projet en recherche et développement
       company:
         name: CEA-LETI
-        link: http://www-leti.cea.fr/
+        link: https://www-leti.cea.fr/
         place: Grenoble
       date: 2013-2014
       content: |
@@ -187,7 +187,7 @@ content:
     - title: Stagiaire de fin d’étude
       company:
         name: CEA-LETI
-        link: http://www-leti.cea.fr/
+        link: https://www-leti.cea.fr/
         place: Grenoble
       date: "2009"
       content: |
@@ -197,7 +197,7 @@ content:
     - title: Stagiaire de maîtrise
       company:
         name: Laboratoire de Physique des Milieux Denses
-        link: http://lcp-a2mc.univ-lorraine.fr/
+        link: https://lcp-a2mc.univ-lorraine.fr/
         place: Metz
       date: "2007"
       content: |
@@ -206,7 +206,7 @@ content:
     - title: Année d’études à l'étranger
       company:
         name: Université du Québec à Trois-Rivières
-        link: http://www.uqtr.ca/
+        link: https://www.uqtr.ca/
         place: Canada
         singular: true
       date: 2006-2007
@@ -234,7 +234,7 @@ content:
     - title: Doctorat en Génie Electrique (PhD)
       company: 
         name: Universités de Grenoble
-        link: http://www.univ-grenoble-alpes.fr/
+        link: https://www.univ-grenoble-alpes.fr/
         place: Grenoble
       date: 2009-2012
       content: |
@@ -250,7 +250,7 @@ content:
     - title: Master professionnel en physique, spécialité modélisation et simulation des systèmes physiques industriels
       company:
         name: Université Joseph Fourier
-        link: http://www.ujf-grenoble.fr/
+        link: https://www.univ-grenoble-alpes.fr/
         place: Grenoble
       date: 2008-2009
       content: |
@@ -288,7 +288,7 @@ content:
     - title: Maitrise de Physique
       company:
         name: Université du Québec à Trois-Rivières
-        link: http://www.uqtr.ca/
+        link: https://www.uqtr.ca/
         place: Canada
         singular: true
       date: 2006-2007
@@ -304,7 +304,7 @@ content:
     - title: Licence de Physique-Chimie
       company:
         name: Université Paul Verlaine
-        link: http://www.univ-lorraine.fr/
+        link: https://www.univ-lorraine.fr/
         place: Metz
       date: 2003-2006
       content: |
@@ -329,7 +329,7 @@ content:
     - title: Baccalauréat scientifique
       company:
         name: Lycée Henri Nominé
-        link: http://www4.ac-nancy-metz.fr/lyc-henri-nomine-sarreguemines/
+        link: https://www.ac-nancy-metz.fr/lyc-henri-nomine-sarreguemines/
         place: sarreguemines
       date: "2003"
       content: ""
