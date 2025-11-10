@@ -13,6 +13,8 @@ head:
   profiles:
     linkedin: https://www.linkedin.com/in/christophe-rubeck-b7481129
     github: https://github.com/Christux
+    viadeo: https://viadeo.journaldunet.com/p/christophe-rubeck-1659311
+    stackblitz: https://stackblitz.com/@Christux
   knows_about: 
     - Data Science
     - Machine Learning

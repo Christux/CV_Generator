@@ -41,10 +41,7 @@
     "jobTitle": "{{ head.job_title }}",
     "image": "{{ head.url }}/img/{{ head.photo }}",
     "url": "{{ head.url }}",
-    "sameAs": [
-      "{{ head.profiles.linkedin }}",
-      "{{ head.profiles.github }}"
-    ],
+    "sameAs": [{% for profile in head.profiles.values() %} "{{ profile }}"{% if not loop.last %}, {% endif %} {% endfor %}],
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Grenoble",
