@@ -1,6 +1,4 @@
 import sys
-import os
-import generator
 from generator.app import App
 from generator.app_config import AppConfig
 
