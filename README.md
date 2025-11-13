@@ -17,7 +17,7 @@ It uses **YAML**, **Jinja2 templates**, and **Markdown**, allowing a clean separ
 
 ---
 
-## 🧩 Project Structure
+## Project Structure
 generator/
 ├── app_config.py           # Application-wide configuration  
 ├── app.py                  # CLI entry point  
