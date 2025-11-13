@@ -9,12 +9,33 @@ from generator.page_generator import PageGenerator
 
 
 class App():
+    """Main application class for managing the CV Generator command-line interface.
+
+    This class handles argument parsing, command execution, and
+    the coordination of components such as the page generator,
+    development server, FTP uploader, and dead link finder.
+    """
 
     def __init__(self, app_config: AppConfig) -> None:
+        """Initialize the application with configuration.
+
+        Args:
+            app_config (AppConfig): The application configuration instance.
+        """
         self._app_config = app_config
 
     def _parse_arguments(self, argv: list[str] | None) -> Namespace:
+        """Parse command-line arguments.
 
+        This method defines the available command-line options and flags,
+        then parses the arguments passed to the application.
+
+        Args:
+            argv (list[str] | None): A list of arguments to parse. If None, uses sys.argv.
+
+        Returns:
+            Namespace: The parsed command-line arguments.
+        """
         parser = ArgumentParser(
             description="CV Generator",
             conflict_handler='resolve',
@@ -41,7 +62,7 @@ class App():
 
         group.add_argument('--ftp-get-tree', action='store_true',
                            help='get folder tree from web server with FTP')
-        
+
         group.add_argument('--find-dead-links', action='store_true',
                            help='check for dead links')
 
@@ -59,7 +80,17 @@ class App():
         return parser.parse_args(argv)
 
     def start_cli(self, argv: list[str] | None = None) -> None:
+        """Start the command-line interface of the application.
 
+        Parses the given arguments and executes the corresponding actions:
+        - Build the web page.
+        - Start a development server.
+        - Upload files via FTP.
+        - Find dead links in generated pages.
+
+        Args:
+            argv (list[str] | None, optional): Command-line arguments to parse. Defaults to None.
+        """
         args = Namespace()
 
         try:
@@ -79,7 +110,6 @@ class App():
             print(type(e))
 
         try:
-
             if args.build:
                 print('Build the page...')
                 pg = PageGenerator(app_config=self._app_config)
@@ -106,8 +136,6 @@ class App():
                 print('Search for dead links...')
                 dead_link_finder = DeadLinkFinder(app_config=self._app_config)
                 dead_link_finder.find_dead_links_in_dist()
-
-            
 
         except Exception as e:
             print('Sorry, something went wrong !')

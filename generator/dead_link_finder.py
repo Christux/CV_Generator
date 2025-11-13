@@ -6,18 +6,36 @@ from generator.app_config import AppConfig
 
 
 class DeadLinkFinder():
+    """A utility class to detect dead or broken links in generated HTML pages."""
 
     def __init__(self, app_config: AppConfig) -> None:
+        """Initialize the dead link finder.
+
+        Args:
+            app_config (AppConfig): The application configuration instance.
+        """
         self._app_config = app_config
 
-    def extract_unique_links(self, html_text, base_url) -> list[str]:
+    def extract_unique_links(self, html_text: str, base_url: str) -> list[str]:
+        """Extract all unique, valid hyperlinks from an HTML document.
+
+        This method parses the given HTML content and collects all unique
+        hyperlinks that are not anchors, JavaScript calls, or mailto links.
+
+        Args:
+            html_text (str): The HTML content to analyze.
+            base_url (str): The base URL used to resolve relative links.
+
+        Returns:
+            list[str]: A list of unique absolute URLs extracted from the HTML content.
+        """
         soup = BeautifulSoup(html_text, "html.parser")
         seen = set()
         unique_links = []
 
         for tag in soup.find_all("a", href=True):
             href = tag["href"].strip()
-            
+
             if not href or href.startswith("#") or href.lower().startswith(("mailto:", "javascript:")):
                 continue
 
@@ -29,8 +47,24 @@ class DeadLinkFinder():
 
         return unique_links
 
-    def find_dead_links(self, html_text: str, base_url=None, timeout=5, verify_ssl=True):
+    def find_dead_links(self, html_text: str, base_url: str | None = None, timeout: int = 5, verify_ssl: bool = True) -> list[dict]:
+        """Check all links in an HTML document for dead (unreachable) URLs.
 
+        Each link is first tested using an HTTP HEAD request; if it fails or
+        returns an error status code, a GET request is retried for confirmation.
+
+        Args:
+            html_text (str): The HTML document to analyze.
+            base_url (str | None, optional): The base URL for resolving relative links. Defaults to None.
+            timeout (int, optional): Timeout duration for each request, in seconds. Defaults to 5.
+            verify_ssl (bool, optional): Whether to verify SSL certificates. Defaults to True.
+
+        Returns:
+            list[dict]: A list of dictionaries describing dead links, where each dictionary contains:
+                - "url" (str): The problematic link.
+                - "status" (int | None): The HTTP status code or None if unreachable.
+                - "error" (str): The error message or reason.
+        """
         dead_links = []
 
         headers = {
@@ -64,7 +98,8 @@ class DeadLinkFinder():
                         print('retry')
                     time.sleep(0.5)
                     response = requests.get(
-                        url, allow_redirects=True, timeout=timeout, verify=verify_ssl, headers=headers)
+                        url, allow_redirects=True, timeout=timeout,
+                        verify=verify_ssl, headers=headers)
 
                 if response.status_code >= 400:
                     if self._app_config.debug:
@@ -90,8 +125,12 @@ class DeadLinkFinder():
 
         return dead_links
 
-    def find_dead_links_in_dist(self):
+    def find_dead_links_in_dist(self) -> None:
+        """Find and display dead links in the generated distribution HTML page.
 
+        Reads the main HTML file from the distribution folder, scans for dead
+        links, and prints each broken URL with its corresponding error message.
+        """
         with open(file=self._app_config.abs_dist_page_path, mode="r", encoding="utf-8") as file:
             html = file.read()
 
